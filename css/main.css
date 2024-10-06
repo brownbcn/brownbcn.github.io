@@ -2105,6 +2105,9 @@ html.no-csstransitions .home-content__main {
     padding-bottom: 0rem;
     background-color: #FFFFFF;
     position: relative;
+    font-family: "Butler-Free-Bd", sans-serif;
+
+    
 }
 
 .about-content {
@@ -2198,7 +2201,7 @@ html.no-csstransitions .home-content__main {
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 00px) {
     .about-content .left {
         padding-right: 20px;
     }
@@ -4043,7 +4046,7 @@ article.blog-single .blog-content {
 }.image-container {
     display: flex;
     width: 100%;
-    height: 700px; /* Tamaño fijo del contenedor de las imágenes */
+    height: 10%; /* Tamaño fijo del contenedor de las imágenes */
 }
 
 .image-box {
@@ -4057,6 +4060,7 @@ article.blog-single .blog-content {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ajusta las imágenes para que rellenen el contenedor */
+    
 }
 
 .image-text {
@@ -4065,8 +4069,16 @@ article.blog-single .blog-content {
     left: 50%; /* Centra horizontalmente */
     transform: translate(-50%, -50%); /* Ajuste para centrar completamente */
     color: white; /* Color del texto */
-    font-size: 2rem; /* Tamaño de la fuente */
-    font-family: Arial, sans-serif; /* Fuente */
+    font-family: "Butler-Free-Bd", sans-serif; /* Fuente */
     text-align: center; /* Alineación del texto */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejor legibilidad */
+    
+    
+}/* Estilos específicos para cada texto */
+.image-text1 {
+    font-size: 8rem; /* Tamaño de texto para la primera imagen */
+}
+
+.image-text2 {
+    font-size: 2rem; /* Tamaño de texto para la segunda imagen */
 }

@@ -1330,101 +1330,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* ------------------------------------------------------------------- 
- * ## blog-list - (_common-styles.scss)
- * ------------------------------------------------------------------- */
-
-.blog-list {
-    margin-top: 6rem;
-    margin-left: 0;
-}
-
-.blog-list article {
-    margin-bottom: 7.2rem;
-}
-
-.blog-list article:nth-child(2n+1) {
-    padding-right: 50px;
-}
-
-.blog-list article:nth-child(2n+2) {
-    padding-left: 50px;
-}
-
-.blog-list h2 {
-    font-family: "montserrat-medium", sans-serif;
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-top: .3rem;
-    margin-bottom: 2.1rem;
-    padding-bottom: 2.4rem;
-    color: #0D0A0B;
-    position: relative;
-}
-
-.blog-list h2 a {
-    color: #0D0A0B;
-}
-
-.blog-list h2::after {
-    display: block;
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 1px;
-    width: 80px;
-    background-color: rgba(0, 0, 0, 0.15);
-}
-
-.blog-list .blog-date {
-    font-family: "montserrat-regular", sans-serif;
-    font-size: 1.5rem;
-    color: #862121;
-}
-
-.blog-list .blog-date a {
-    color: #862121;
-}
-
-.blog-list .blog-date a:hover, 
-.blog-list .blog-date a:focus, 
-.blog-list .blog-date a:active {
-    color: #000000;
-}
-
-.blog-list .blog-cat {
-    font-family: "montserrat-medium", sans-serif;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    color: #000000;
-    margin-top: -.9rem;
-}
-
-.blog-list .blog-cat a {
-    color: #000000;
-}
-
-.blog-list .blog-cat a:hover, 
-.blog-list .blog-cat a:focus, 
-.blog-list .blog-cat a:active {
-    color: #862121;
-}
-
-.blog-list .blog-cat a::after {
-    content: ", ";
-}
-
-.blog-list .blog-cat a:last-child::after {
-    display: none;
-}
-
-
-/* ------------------------------------------------------------------- 
- * responsive:
- * blog-list
- * ------------------------------------------------------------------- */
 
 @media only screen and (max-width: 1200px) {
     .blog-list article:nth-child(2n+1) {
@@ -2196,22 +2101,22 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 
 .s-about {
-    padding-top: 15rem;
-    padding-bottom: 9rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
     background-color: #FFFFFF;
     position: relative;
 }
 
 .about-content {
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
 }
 
 .about-content .left {
-    padding-right: 40px;
+    padding-right: 0px;
 }
 
 .about-content .right {
-    padding-left: 40px;
+    padding-left: 0px;
 }
 
 
@@ -4135,4 +4040,33 @@ article.blog-single .blog-content {
     .commentlist .comment__avatar {
         display: none;
     }
+}.image-container {
+    display: flex;
+    width: 100%;
+    height: 700px; /* Tamaño fijo del contenedor de las imágenes */
+}
+
+.image-box {
+    position: relative;
+    width: 50%; /* Cada imagen ocupa el 50% del ancho */
+    height: 100%; /* Rellena toda la altura del contenedor */
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta las imágenes para que rellenen el contenedor */
+}
+
+.image-text {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar completamente */
+    color: white; /* Color del texto */
+    font-size: 2rem; /* Tamaño de la fuente */
+    font-family: Arial, sans-serif; /* Fuente */
+    text-align: center; /* Alineación del texto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejor legibilidad */
 }

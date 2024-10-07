@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Butler'; /* El nombre que usarás para referenciar la fuente */
+    src: url('fonts/butler/Butler-Free-Bd.otf') format('truetype'), /* Cambia la ruta según la ubicación del archivo */
+         url('fonts/butler/Butler-Free-Blk.otf') format('truetype'); /* Puedes añadir otras variaciones si las tienes */
+    font-weight: normal; /* Estilo de la fuente normal */
+    font-style: normal; /* Estilo normal */
+}
+
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilo para la barra de menú */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar .logo a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-family:'butler', serif; /* Aplica la fuente Butler */
+    transition: color 0.3s;
+}
+
+.navbar .logo a:hover {
+    color: #f0f0f0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #f0f0f0;
+}
+
+
+
+/* Estilo para la sección Home */
+#home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Color de fondo de reserva */
+    padding-top: 60px; /* Espacio para la barra de menú fija */
+    text-align: center; /* Centrar el texto */
+    background-image: url('images/fondo-home.jpg'); /* Establece la imagen de fondo */
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+
+.welcome-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-large {
+    font-size: 10rem; /* Tamaño grande para "brown." */
+    color: #ffffff;
+    font-family: 'butler', serif
+}
+
+.welcome-small {
+    
+    display: flex; /* Usa flex para alinear las líneas y el texto */
+    align-items: center; /* Centrar verticalmente */
+    margin-top: -65px; /* Espacio entre "brown." y "estudio creativo" */
+    font-size: 2rem; /* Tamaño más pequeño para "estudio creativo" */
+    color: #ffffff; /* Color más claro para el texto */
+    font-family: 'butler', serif /* Aplica la fuente Butler */
+}
+
+/* Estilo para las líneas */
+.line {
+    height: 3px; /* Grosor de la línea */
+    background-color: #ffffff; /* Color de la línea */
+    flex: 1; /* Ocupa el espacio restante */
+    margin: 0 20px; /* Espaciado entre la línea y el texto */
+    min-width: 110px; /* Longitud mínima de la línea */
+    align-self: auto; /* Asegura que la línea esté centrada verticalmente */
+}
+
+/* Estilos para el logo */
+.logo-desktop {
+    display: inline; /* Muestra el texto de escritorio por defecto */
+}
+
+.logo-mobile {
+    display: none; /* Oculta el texto móvil por defecto */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) { /* Cambia este valor según tus necesidades */
+    .logo-desktop {
+        display: none; /* Oculta el texto de escritorio en móviles */
+    }
+    .logo-mobile {
+        display: inline; /* Muestra el texto móvil en dispositivos móviles */
+    }
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) { /* Ajusta el valor según el punto de ruptura deseado */
+    .logo-desktop {
+        display: none; /* Oculta el texto de escritorio en móvil */
+    }
+    .logo-mobile {
+        display: inline; /* Muestra el texto móvil en dispositivos móviles */
+    }
+}
+
+

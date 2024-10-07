@@ -4049,55 +4049,36 @@ article.blog-single .blog-content {
     height: 10%; /* Tamaño fijo del contenedor de las imágenes */
 }
 
-/* Contenedor de las imágenes en la sección About */
-.image-container {
-    display: flex;
-    width: 100%;
-    height: 100vh; /* Ocupa la altura completa de la ventana */
-}
-
 .image-box {
     position: relative;
-    flex: 1; /* Divide el espacio en 2 columnas iguales */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Asegura que la imagen no sobresalga del contenedor */
+    width: 50%; /* Cada imagen ocupa el 50% del ancho */
+    height: 100%; /* Rellena toda la altura del contenedor */
+    overflow: hidden;
 }
 
 .image-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* La imagen rellena el div manteniendo la relación de aspecto, recortándose si es necesario */
+    object-fit: cover; /* Ajusta las imágenes para que rellenen el contenedor */
+    
 }
 
 .image-text {
     position: absolute;
-    color: white;
-    font-size: 8rem;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0); /* Fondo semitransparente para el texto */
-    padding: 20px 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar completamente */
+    color: white; /* Color del texto */
+    font-family: "Butler-Free-Bd", sans-serif; /* Fuente */
+    text-align: center; /* Alineación del texto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejor legibilidad */
     
-    /* Estilos específicos para cada texto */
+    
+}/* Estilos específicos para cada texto */
 .image-text1 {
     font-size: 8rem; /* Tamaño de texto para la primera imagen */
 }
 
-/* Texto sobre la segunda imagen */
 .image-text2 {
-    position: absolute;
-    color: white;
-    font-size: 2.5rem; /* Puedes ajustar el tamaño del texto si lo deseas */
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0); /* Fondo oscuro semitransparente */
-    padding: 25px; /* Aumenta el espacio alrededor del texto */
-    margin: 40px; /* Añade márgenes a los lados (izquierda y derecha) */
-    border-radius: 10px;
-    text-align: center;
-    width: calc(100% - 170px); /* Reduce el ancho para dejar espacio con los márgenes */
+    font-size: 2rem; /* Tamaño de texto para la segunda imagen */
 }

@@ -25,7 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
+    background-color: #000000;
     padding: 15px 30px;
     position: fixed;
     width: 100%;
@@ -139,7 +139,7 @@ body {
 /* Estilos generales del cuerpo */
 body {
     margin: 0;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat',
 }
 
 /* Barra de navegación */
@@ -148,7 +148,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #000000;
     color: white;
 }
 
@@ -190,14 +190,14 @@ body {
 
     #menu ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
         text-align: center;
         padding: 0;
         margin: 0;
     }
 
     #menu li {
-        margin: 10px 0;
+        margin: 25px 0;
     }
 
     /* Mostramos el ícono de hamburguesa en móviles */

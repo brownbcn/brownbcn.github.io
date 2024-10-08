@@ -44,6 +44,7 @@ body {
 
 .navbar .logo a:hover {
     color: #f0f0f0;
+    
 }
 
 .navbar ul {
@@ -135,14 +136,77 @@ body {
     }
 }
 
-/* Media query para dispositivos móviles */
-@media (max-width: 768px) { /* Ajusta el valor según el punto de ruptura deseado */
-    .logo-desktop {
-        display: none; /* Oculta el texto de escritorio en móvil */
+/* Estilos generales del cuerpo */
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Ícono del menú hamburguesa (oculto en escritorio, visible en móviles) */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Menú en escritorio */
+#menu {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    /* Ocultamos el menú completo en pantallas pequeñas */
+    #menu {
+        display: none; /* Oculto por defecto en móvil */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%; /* Ocupa toda la pantalla cuando se despliega */
     }
-    .logo-mobile {
-        display: inline; /* Muestra el texto móvil en dispositivos móviles */
+
+    #menu ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    #menu li {
+        margin: 10px 0;
+    }
+
+    /* Mostramos el ícono de hamburguesa en móviles */
+    .menu-icon {
+        display: block;
     }
 }
 
-
+/* Estilos para cuando el menú está desplegado */
+.menu-open #menu {
+    display: flex;
+}

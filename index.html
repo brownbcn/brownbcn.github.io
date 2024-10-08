@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>brown.</title>
-    <!-- Enlace a Google Fonts para Butler (o una alternativa) -->
+    <title>brown</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,11 +13,18 @@
 <header class="navbar">
     <div class="logo">
         <a href="#home">
-            <span class="logo-desktop">brown.</span> <!-- Texto para la versión de escritorio -->
-            <span class="logo-mobile">b.</span> <!-- Texto para la versión móvil -->
+            <span class="logo-desktop">brown.</span> <!-- Versión escritorio -->
+            <span class="logo-mobile">b.</span> <!-- Versión móvil -->
         </a>
     </div>
-    <nav>
+    
+    <!-- Ícono del menú hamburguesa (visible en móviles) -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        &#9776; <!-- Este es el ícono de hamburguesa -->
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav id="menu">
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -28,21 +34,23 @@
     </nav>
 </header>
 
-
-
-<!-- Sección Home -->
+<!-- Contenido de la página -->
 <section id="home">
     <div class="welcome-message">
         <div class="welcome-large">brown.</div>
         <div class="welcome-small">
-            <div class="line left"></div> <!-- Línea izquierda -->
+            <div class="line left"></div>
             <span>estudio creativo</span>
-            <div class="line right"></div> <!-- Línea derecha -->
+            <div class="line right"></div>
         </div>
     </div>
 </section>
 
-<script src="scripts.js"></script>
+<script>
+function toggleMenu() {
+    var navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('menu-open'); // Añade o quita la clase 'menu-open'
+}
+</script>
 </body>
 </html>
-

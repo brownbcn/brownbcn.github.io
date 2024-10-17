@@ -210,3 +210,46 @@ body {
 .menu-open #menu {
     display: flex;
 }
+/* Estilos generales para el pop-up */
+.popup-overlay {
+    position: fixed; /* Posiciona el pop-up sobre toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; /* Oculto por defecto */
+    opacity: 0; /* Transparente por defecto */
+    transition: visibility 0s, opacity 0.3s ease; /* Transición para suavidad */
+}
+
+/* Contenido del pop-up */
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%; /* Ocupa el 90% del ancho de la pantalla en móviles */
+    max-width: 500px; /* Ancho máximo en pantallas grandes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de cerrar el pop-up (X) */
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Mostrar el pop-up cuando esté activo */
+.popup-show {
+    visibility: visible;
+    opacity: 1;
+}

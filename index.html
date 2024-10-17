@@ -46,11 +46,27 @@
     </div>
 </section>
 
+<!-- Pop-up de aviso -->
+<div id="popup" class="popup-overlay">
+    <div class="popup-content">
+        <span class="popup-close" onclick="closePopup()">&times;</span>
+        <h2>Aviso importante</h2>
+        <p>Esta web está actualmente bajo construcción. Algunas secciones pueden no estar completas.</p>
+    </div>
+</div>
 <script>
-function toggleMenu() {
-    var navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('menu-open'); // Añade o quita la clase 'menu-open'
-}
+    // Mostrar el pop-up 3 segundos después de cargar la página
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById("popup").classList.add("popup-show");
+        }, 3000); // 3000 milisegundos = 3 segundos
+    };
+
+    // Función para cerrar el pop-up
+    function closePopup() {
+        document.getElementById("popup").classList.remove("popup-show");
+    }
 </script>
+
 </body>
 </html>
